@@ -1,0 +1,43 @@
+{
+	"name": "BrowserDev",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./src/main.js",
+	"isBuildNow": true,
+	"scripts": {
+		"start": "electron .",
+		"dev": "nodemon --exec electron ./src/main.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "electron-builder build --win --publish never"
+	},
+	"build": {
+		"productName": "Browser Dev",
+		"appId": "com.browserDev.BrowserDEV",
+		"directories": {
+			"buildResources": "."
+		},
+		"files": [
+			"src/**/*"
+		],
+		"win": {
+			"asar": true,
+			"target": "nsis"
+		},
+		"nsis": {
+			"deleteAppDataOnUninstall": true
+		}
+	},
+	"keywords": [],
+	"author": "rluuan",
+	"license": "ISC",
+	"dependencies": {
+		"@electron/remote": "^2.0.9",
+		"path": "^0.12.7"
+	},
+	"devDependencies": {
+		"electron": "^22.0.0",
+		"electron-builder": "^23.6.0",
+		"electron-reload": "^2.0.0-alpha.1",
+		"nodemon": "^2.0.20"
+	}
+}

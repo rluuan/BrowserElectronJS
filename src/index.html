@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" href="FlexBoxHelper.css">
+
+		<style>
+
+.inp_url {width: 99%;margin-top: 10px;padding: 5px;border-radius: 10px;border: 1px solid #ddd;box-shadow: 1px 1px 3px #ddd inset;font-size: 15px;}
+			.header { width: 100%; background-color: #cae9e9; display: flex; }
+				.line { width: 100px; cursor: pointer; height: 10px; padding: 10px; box-shadow: 1px 1px 3px #ddd; background: #76b1b1; border-radius: 5px; display: flex; justify-content: center; align-items: center; }
+				.line + .line { margin-left: 10px; }
+				.aba_plus { margin-left: 20px; margin-top: 3px }
+				.line.isActive { background: #7a7aff; }
+				.line.isActive:hover { background: #a1a1e1; }
+
+			.line { display: flex; }
+		</style>
+	</head>
+
+	<body>
+
+		<div class="header">
+			<div class='line isActive'>
+				<div class='aba'> Google</div>
+				<span class='aba_plus'> + </span>
+			</div>
+		  	
+		</div>
+		<input type='text' class='inp_url' value='https://google.com.br'></input>
+	    	
+
+	</body>
+
+</html>
